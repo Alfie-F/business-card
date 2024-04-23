@@ -97,3 +97,20 @@ emailInput.addEventListener("blur", (event) => {
     emailInput.classList.add("validInput");
   }
 });
+
+const form = document.getElementById("submission-form");
+const validElements = document.getElementsByClassName(".validInput");
+
+form.addEventListener("submit", (event) => {
+  const elements = event.target.elements;
+  [...elements].forEach((element) => {
+    if (element.classList.length < 1) {
+      element.classList.add("invalidInput");
+    }
+  });
+  console.dir(event);
+  console.log(validElements);
+  if (!form.classList.contains("validInput") && validElements.length < 6) {
+    event.preventDefault();
+  }
+});
