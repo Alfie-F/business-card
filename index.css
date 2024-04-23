@@ -4,12 +4,72 @@
   align-items: center;
 }
 
+body {
+  font-family: "Arial";
+  background-color: rgba(240, 214, 253, 0.573);
+}
+
+header > p {
+  padding-bottom: 5%;
+}
+
+header {
+  background-color: rgba(228, 187, 228, 0.887);
+  width: 100%;
+  border-color: rgb(171, 62, 148);
+  border-bottom-style: solid;
+  border-width: 5px;
+}
+
+#name-input,
+#surname-input,
+#company-input,
+#job-title-input,
+#phone-number-input,
+#email-input {
+  border-radius: 5%;
+  padding: 5px;
+  width: 100%;
+}
+
+.label {
+  font-size: large;
+  color: rgb(0, 0, 0);
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+.submit-error-msg {
+  color: red;
+}
+
+.error-msg {
+  color: red;
+  font-size: medium;
+  text-align: start;
+}
+
+.create-button {
+  padding: 2%;
+  width: 80%;
+  background-color: rgb(176, 134, 215);
+  font-size: larger;
+  border-radius: 5px;
+}
+
 .validInput {
-  background-color: rgba(38, 119, 45, 0.479);
+  border-color: rgba(38, 119, 45, 0.479);
+  border-radius: 15%;
+  padding: 5px;
+  width: 100%;
 }
 
 .invalidInput {
-  background-color: rgba(199, 37, 8, 0.479);
+  border-color: rgba(199, 37, 8, 0.479);
+  border-radius: 15%;
+  padding: 5px;
+  width: 100%;
 }
 
 .hidden {
