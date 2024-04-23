@@ -1,0 +1,15 @@
+.centred-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-value {
+  font-size: large;
+  padding-left: 15px;
+}
+
+.card-label {
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
