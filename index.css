@@ -1,0 +1,17 @@
+.centred-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+ 
+  .validInput{
+    background-color: rgba(38, 119, 45, 0.479);
+  }
+  
+  .invalidInput{
+    background-color: rgba(199, 37, 8, 0.479);
+  }
+  
+  .hidden{display: none;}
