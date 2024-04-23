@@ -87,6 +87,7 @@ const emailInputError = document.getElementById("email-input-error");
 emailInput.addEventListener("blur", (event) => {
   const input = event.target;
   const validEmail = /^[a-z0-9]+@[a-z]+(.com|.co.uk|.org)$/;
+
   if (!validEmail.test(input.value)) {
     emailInputError.firstElementChild.classList.remove("hidden");
     emailInput.classList.remove("validInput");
@@ -101,9 +102,9 @@ emailInput.addEventListener("blur", (event) => {
 const form = document.getElementById("submission-form");
 
 form.addEventListener("submit", (event) => {
-  let validElements = document.querySelectorAll(".validInput");
-  console.log(document.location.search);
+  const validElements = document.querySelectorAll(".validInput");
   const elements = event.target.elements;
+
   [...elements].forEach((element) => {
     if (element.classList.length < 1) {
       element.classList.add("invalidInput");
@@ -111,7 +112,11 @@ form.addEventListener("submit", (event) => {
   });
 
   if (!form.classList.contains("validInput") && validElements.length < 6) {
+    const insufficientValuesMsg = document.createElement("p");
+    insufficientValuesMsg.innerText = "Please fill all required values!";
+    insufficientValuesMsg.classList.add("submit-error-msg");
+    form.appendChild(insufficientValuesMsg);
+
     event.preventDefault();
-  } else {
   }
 });
